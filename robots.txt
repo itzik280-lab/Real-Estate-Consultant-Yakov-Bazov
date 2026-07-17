@@ -1,0 +1,4 @@
+# יש להחליף את הדומיין בכתובת האמיתית של האתר לפני ההעלאה
+User-agent: *
+Allow: /
+Sitemap: https://www.your-domain.co.il/sitemap.xml

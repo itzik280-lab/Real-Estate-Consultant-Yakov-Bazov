@@ -19,6 +19,10 @@
 <meta name="twitter:description" content="יעקב, יועץ נדל״ן בבאר שבע. ליווי בקנייה, מכירה והשקעות, תמחור לפי עסקאות אמת, ניהול משא ומתן ושירות אישי ללא התחייבות.">
 <meta name="twitter:image" content="assets/og-image.jpg">
 <link rel="icon" href="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23163E6C'/%3E%3Ctext x='30' y='45' font-family='Georgia,serif' font-size='36' font-weight='700' fill='%23ffffff' text-anchor='middle'%3E%D7%99%3C/text%3E%3Ccircle cx='45' cy='41' r='4.5' fill='%23A32335'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<!-- לאחר חיבור הדומיין הקבוע: הסירו את ההערה ועדכנו את הכתובת -->
+<!-- <link rel="canonical" href="https://www.your-domain.co.il/"> -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700&amp;family=Heebo:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
@@ -33,7 +37,7 @@
       "name": "יעקב, יועץ נדל״ן בבאר שבע",
       "description": "ייעוץ נדל״ן וליווי אישי במכירת דירה, ברכישת דירה ובהשקעות בבאר שבע: תמחור לפי עסקאות אמת, תהליך מסודר ומשא ומתן מנוסה.",
       "telephone": "+972-54-268-1216",
-      "email": "YAKOVB280@gmail.com",
+      "email": "yakovb280@gmail.com",
       "image": "assets/og-image.jpg",
       "priceRange": "₪₪",
       "areaServed": ["באר שבע", "נחל עשן", "שכונה י״א", "שכונה ו׳", "העיר העתיקה"],
@@ -102,7 +106,7 @@
   --red-soft:#F3DCE0;
   --ink:#1C2635;
   --muted:#5D6878;
-  --faint:#8B95A5;
+  --faint:#6C7687;
   --line:#E5E9F0;
   --soft:#F6F8FA;
   --tile:#EDF2F8;
@@ -138,6 +142,7 @@ input,textarea{font:inherit;color:inherit}
 }
 .skip-link{position:absolute;inset-inline-start:12px;top:-60px;z-index:200;background:var(--navy);color:#fff;padding:10px 18px;border-radius:10px;font-weight:600;transition:top .2s}
 .skip-link:focus{top:12px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 
 /* ============ layout & shared ============ */
 .container{width:min(1120px,90%);margin-inline:auto}
@@ -216,8 +221,7 @@ body.menu-open{overflow:hidden}
 .hero{padding-top:calc(var(--nav-h) + clamp(34px,6vw,72px));padding-bottom:clamp(48px,6vw,84px)}
 .hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:clamp(36px,6vw,84px);align-items:center}
 .hero-copy .eyebrow{margin-bottom:22px}
-.hero h1{font-family:var(--serif);font-weight:700;font-size:clamp(2.3rem,5.3vw,3.65rem);line-height:1.18;letter-spacing:-.015em;color:var(--ink);margin-bottom:18px;max-width:15ch}
-.hero-sub{font-family:var(--serif);font-weight:500;font-size:clamp(1.15rem,1.8vw,1.4rem);line-height:1.5;color:var(--navy);margin-bottom:16px}
+.hero h1{font-family:var(--serif);font-weight:700;font-size:clamp(2.3rem,5.3vw,3.65rem);line-height:1.18;letter-spacing:-.015em;color:var(--ink);margin-bottom:22px;max-width:15ch}
 .hero-lead{font-size:clamp(1.05rem,1.4vw,1.17rem);line-height:1.85;color:var(--muted);max-width:52ch;margin-bottom:34px}
 .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:22px}
 .hero-note{display:flex;flex-wrap:wrap;align-items:center;row-gap:6px;column-gap:14px;font-size:.95rem;color:var(--muted)}
@@ -293,13 +297,14 @@ body.menu-open{overflow:hidden}
 .principle p{color:var(--muted);font-size:.99rem;line-height:1.85}
 
 /* ============ testimonials ============ */
-.t-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.5vw,26px)}
-.t-card{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--r-card);padding:30px 26px 24px;box-shadow:var(--shadow-s);display:flex;flex-direction:column;gap:18px}
-.t-card::before{content:"”";position:absolute;top:2px;inset-inline-end:20px;font-family:var(--serif);font-size:4.6rem;line-height:1;color:var(--red);opacity:.14;pointer-events:none}
-.t-quote{font-size:1rem;line-height:1.9;color:var(--ink)}
-.t-sign{margin-top:auto;padding-top:16px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:2px}
-.t-name{font-weight:600;color:var(--ink)}
-.t-meta{font-size:.85rem;color:var(--muted)}
+.t-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.5vw,26px);align-items:start}
+.r-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-card);padding:22px 22px 24px;box-shadow:var(--shadow-s);display:flex;flex-direction:column;gap:15px}
+.r-head{display:flex;align-items:center;gap:13px}
+.r-avatar{flex:none;width:44px;height:44px;border-radius:50%;background:var(--tile);color:var(--navy);font-family:var(--serif);font-weight:700;font-size:1.08rem;display:flex;align-items:center;justify-content:center}
+.r-id{display:flex;flex-direction:column;gap:1px;min-width:0}
+.r-name{font-size:1rem;font-weight:600;color:var(--ink);line-height:1.3}
+.r-meta{font-size:.84rem;color:var(--muted)}
+.r-text{font-size:.98rem;line-height:1.9;color:var(--ink)}
 
 /* ============ faq ============ */
 .faq{max-width:760px;margin-inline:auto}
@@ -361,10 +366,14 @@ textarea.f-input{resize:vertical;min-height:104px;line-height:1.7}
 .footer-brand .seal{width:46px;height:46px}
 .footer-tag{font-size:.93rem;color:var(--muted)}
 .footer-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 26px}
-.footer-nav a{font-size:.93rem;font-weight:500;color:var(--muted);transition:color .25s}
+.footer-nav a{display:inline-block;padding-block:6px;font-size:.93rem;font-weight:500;color:var(--muted);transition:color .25s}
 .footer-nav a:hover{color:var(--navy)}
+.footer-socials{display:flex;justify-content:center;gap:12px}
+.footer-socials a{width:46px;height:46px;border-radius:50%;border:1.5px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--navy);transition:border-color .25s,transform .25s}
+.footer-socials a:hover{border-color:var(--navy);transform:translateY(-2px)}
+.footer-socials svg{width:20px;height:20px}
 .footer-meta{display:flex;flex-direction:column;gap:6px;font-size:.85rem;color:var(--faint)}
-.footer-meta .a11y-link{color:var(--faint);text-decoration:underline;text-underline-offset:3px;transition:color .25s}
+.footer-meta .a11y-link{display:inline-block;padding-block:6px;color:var(--muted);text-decoration:underline;text-underline-offset:3px;transition:color .25s}
 .footer-meta .a11y-link:hover{color:var(--navy)}
 
 /* accessibility dialog */
@@ -453,7 +462,7 @@ textarea.f-input{resize:vertical;min-height:104px;line-height:1.7}
   <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
     <path d="M22 16.9v2a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 3.2 2 2 0 0 1 4.1 1h2a2 2 0 0 1 2 1.7c.12.9.35 1.8.67 2.6a2 2 0 0 1-.45 2.1L7.1 8.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.45c.84.32 1.72.55 2.62.67A2 2 0 0 1 22 16.9z"/>
   </symbol>
-  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
     <rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="m3.5 7.2 8.5 6 8.5-6"/>
   </symbol>
   <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -522,7 +531,7 @@ textarea.f-input{resize:vertical;min-height:104px;line-height:1.7}
     <div class="mm-socials">
       <a href="https://www.facebook.com/share/1FC1Z5vm6o/" target="_blank" rel="noopener" aria-label="הפייסבוק של יעקב"><svg aria-hidden="true"><use href="#i-fb"/></svg></a>
       <a href="https://www.instagram.com/hamerkazlanadlan?igsh=bWh0N2I4aGo3azRs" target="_blank" rel="noopener" aria-label="האינסטגרם של יעקב"><svg aria-hidden="true"><use href="#i-ig"/></svg></a>
-      <a href="mailto:YAKOVB280@gmail.com" aria-label="שליחת מייל ליעקב"><svg aria-hidden="true"><use href="#i-mail"/></svg></a>
+      <a href="mailto:yakovb280@gmail.com" aria-label="שליחת מייל ליעקב"><svg aria-hidden="true"><use href="#i-mail"/></svg></a>
     </div>
   </div>
 </div>
@@ -535,9 +544,8 @@ textarea.f-input{resize:vertical;min-height:104px;line-height:1.7}
     <div class="hero-copy">
       <p class="eyebrow" data-reveal>יעקב · יועץ נדל״ן · באר שבע</p>
       <h1 data-reveal style="--d:.08s">החלטות של מיליוני שקלים <span class="hl">לא מקבלים לבד.</span></h1>
-      <p class="hero-sub" data-reveal style="--d:.14s">אני כאן כדי להפוך את החוויה שלכם ממלחיצה לנעימה.</p>
-      <p class="hero-lead" data-reveal style="--d:.2s">אני יעקב, יועץ נדל״ן בבאר שבע. אנשים יושבים איתי לפני שהם קונים או מוכרים דירה, ואני עוזר להם להבין כמה היא באמת שווה, מנהל בשבילם את המשא ומתן, ושומר שלא יחתמו לפני שכל מה שחשוב נבדק היטב.</p>
-      <div class="hero-cta" data-reveal style="--d:.26s">
+      <p class="hero-lead" data-reveal style="--d:.14s">אני יעקב, יועץ נדל״ן בבאר שבע. אנשים יושבים איתי לפני שהם קונים או מוכרים דירה, ואני עוזר להם להבין כמה היא באמת שווה, מנהל בשבילם את המשא ומתן, ושומר שלא יחתמו לפני שכל מה שחשוב נבדק היטב.</p>
+      <div class="hero-cta" data-reveal style="--d:.22s">
         <a class="btn btn--primary" href="https://wa.me/972542681216?text=%D7%94%D7%99%D7%99%20%D7%99%D7%A2%D7%A7%D7%91%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%93%D7%91%D7%A8" target="_blank" rel="noopener">
         <svg aria-hidden="true"><use href="#i-wa"/></svg>
           דברו איתי בוואטסאפ
@@ -547,7 +555,7 @@ textarea.f-input{resize:vertical;min-height:104px;line-height:1.7}
           <span class="phone-num">054-268-1216</span>
         </a>
       </div>
-      <p class="hero-note" data-reveal style="--d:.32s">
+      <p class="hero-note" data-reveal style="--d:.28s">
         <span>פגישת ייעוץ ללא התחייבות</span>
         <span class="note-sep" aria-hidden="true"></span>
         <span class="status"><span class="status-dot" aria-hidden="true"></span>זמין עכשיו</span>
@@ -733,47 +741,65 @@ textarea.f-input{resize:vertical;min-height:104px;line-height:1.7}
       <h2 id="testimonials-title" data-reveal style="--d:.08s">המילים של מי שכבר עבר את זה.</h2>
     </div>
     <div class="t-grid">
-      <article class="t-card" data-reveal>
-        <p class="t-quote">הגענו לחוצים, בעיקר אני. יעקב עבר איתנו על כל סעיף עד שהבנו מה אנחנו חותמים, וכשניסו להעלות לנו את המחיר ברגע האחרון, הוא סגר את זה בשיחה אחת. סוף סוף ישנו טוב.</p>
-        <div class="t-sign">
-          <span class="t-name">רותם ועומר</span>
-          <span class="t-meta">קנו דירה ראשונה · שכונה י״א</span>
-        </div>
+      <article class="r-card" data-reveal>
+        <header class="r-head">
+          <span class="r-avatar" aria-hidden="true">ר</span>
+          <div class="r-id">
+            <h3 class="r-name">רותם ועומר</h3>
+            <span class="r-meta">קנו דירה ראשונה · שכונה י״א</span>
+          </div>
+        </header>
+        <p class="r-text">היי יעקב 😊<br>רצינו להגיד שוב תודה. הגענו ממש לחוצים ולא ידענו למה לצפות, אבל לאורך כל הדרך הרגשנו שיש על מי לסמוך. תודה שלא נתת לנו לקבל החלטות בלחץ. מעריכים מאוד ❤️</p>
       </article>
-      <article class="t-card" data-reveal style="--d:.06s">
-        <p class="t-quote">לא הבנתי כלום במשכנתאות ובחוזים, וקצת התביישתי לשאול. קיבלתי הסברים בגובה העיניים, בלי זלזול. גם המחיר יצא טוב יותר ממה שציפיתי.</p>
-        <div class="t-sign">
-          <span class="t-name">דניאל</span>
-          <span class="t-meta">קנה דירה ראשונה · שכונה ו׳</span>
-        </div>
+      <article class="r-card" data-reveal style="--d:.06s">
+        <header class="r-head">
+          <span class="r-avatar" aria-hidden="true">ד</span>
+          <div class="r-id">
+            <h3 class="r-name">דניאל</h3>
+            <span class="r-meta">קנה דירה ראשונה · שכונה ו׳</span>
+          </div>
+        </header>
+        <p class="r-text">יעקב, באמת תודה.<br>בהתחלה לא הבנתי כלום, וכל פעם שהייתה לי שאלה היית זמין להסביר בלי לגרום לי להרגיש שאני שואל שטויות. בסוף יצא בדיוק כמו שאמרת.</p>
       </article>
-      <article class="t-card" data-reveal style="--d:.12s">
-        <p class="t-quote">מכרנו דירה וקנינו בית כמעט באותו זמן. לתאם שתי עסקאות במקביל זה סיוט, ויעקב החזיק את שתיהן ביד. כל טלפון נענה, גם בשמונה בערב.</p>
-        <div class="t-sign">
-          <span class="t-name">משפחת אזולאי</span>
-          <span class="t-meta">מכרו וקנו · נחל עשן</span>
-        </div>
+      <article class="r-card" data-reveal style="--d:.12s">
+        <header class="r-head">
+          <span class="r-avatar" aria-hidden="true">א</span>
+          <div class="r-id">
+            <h3 class="r-name">משפחת אזולאי</h3>
+            <span class="r-meta">מכרו וקנו דירה · נחל עשן</span>
+          </div>
+        </header>
+        <p class="r-text">רצינו להגיד תודה ענקית. למכור דירה ולקנות בית כמעט באותו זמן היה נראה לנו בלתי אפשרי, אבל דאגת שכל שלב יהיה מסודר. תמיד ידענו איפה הדברים עומדים וזה נתן לנו הרבה שקט.</p>
       </article>
-      <article class="t-card" data-reveal style="--d:.06s">
-        <p class="t-quote">ראיתי הרבה מתווכים לאורך השנים. יעקב בא עם מספרים, לא עם סיפורים. על דירה אחת הוא אמר לי לוותר, ובדיעבד צדק. בגלל זה חזרתי אליו לעסקה הבאה.</p>
-        <div class="t-sign">
-          <span class="t-name">אבי</span>
-          <span class="t-meta">משקיע נדל״ן</span>
-        </div>
+      <article class="r-card" data-reveal>
+        <header class="r-head">
+          <span class="r-avatar" aria-hidden="true">א</span>
+          <div class="r-id">
+            <h3 class="r-name">אבי</h3>
+            <span class="r-meta">משקיע נדל״ן · באר שבע</span>
+          </div>
+        </header>
+        <p class="r-text">אהבתי במיוחד שלא ניסית למכור לי כל עסקה. היו דברים שאמרת לי לוותר עליהם ובדיעבד זה חסך לי לא מעט כסף. שמח שהקשבתי לך ולא מיהרתי 😉</p>
       </article>
-      <article class="t-card" data-reveal style="--d:.12s">
-        <p class="t-quote">למכור את הבית שגידלתי בו את הילדים היה קשה לי. הכול נעשה בסבלנות ובכבוד, בלי לחץ ובלי הצגות. סגרנו במחיר שרצינו, ובקצב שלי.</p>
-        <div class="t-sign">
-          <span class="t-name">מרים</span>
-          <span class="t-meta">מכרה דירה · העיר העתיקה</span>
-        </div>
+      <article class="r-card" data-reveal style="--d:.06s">
+        <header class="r-head">
+          <span class="r-avatar" aria-hidden="true">מ</span>
+          <div class="r-id">
+            <h3 class="r-name">מרים</h3>
+            <span class="r-meta">מכרה דירה · העיר העתיקה</span>
+          </div>
+        </header>
+        <p class="r-text">יעקב היקר,<br>היה לי קשה למכור את הבית, אבל אף פעם לא הרגשתי שמזרזים אותי. נתת לי את הזמן לקבל החלטות בקצב שלי, וזה היה חשוב לי מאוד. ❤️</p>
       </article>
-      <article class="t-card" data-reveal style="--d:.18s">
-        <p class="t-quote">בגיל שלי כבר לא עושים עסקה כזאת כל יום, ואני מודה שחששתי. הבן שלי מצא את יעקב. קיבלתי בן אדם ישר, שאמר לי גם מה לא כדאי. וזה מה שהיה חשוב לי.</p>
-        <div class="t-sign">
-          <span class="t-name">יוסי</span>
-          <span class="t-meta">החליף דירה · באר שבע</span>
-        </div>
+      <article class="r-card" data-reveal style="--d:.12s">
+        <header class="r-head">
+          <span class="r-avatar" aria-hidden="true">י</span>
+          <div class="r-id">
+            <h3 class="r-name">יוסי</h3>
+            <span class="r-meta">החליף דירה · באר שבע</span>
+          </div>
+        </header>
+        <p class="r-text">הכול היה מסודר מההתחלה ועד הסוף. תמיד היית זמין כשהייתי צריך, וגם ידעת להגיד כשמשהו פחות כדאי. ממליץ לכל מי שמחפש ליווי אמיתי.</p>
       </article>
     </div>
   </div>
@@ -863,11 +889,11 @@ textarea.f-input{resize:vertical;min-height:104px;line-height:1.7}
             </a>
           </li>
           <li>
-            <a class="channel" href="mailto:YAKOVB280@gmail.com">
+            <a class="channel" href="mailto:yakovb280@gmail.com">
               <span class="ch-icon"><svg aria-hidden="true"><use href="#i-mail"/></svg></span>
               <span>
                 <span class="ch-label">אימייל</span><br>
-                <span class="ch-value">YAKOVB280@gmail.com</span>
+                <span class="ch-value">yakovb280@gmail.com</span>
               </span>
             </a>
           </li>
@@ -917,6 +943,7 @@ textarea.f-input{resize:vertical;min-height:104px;line-height:1.7}
             פתיחת ההודעה בוואטסאפ
           </button>
           <p class="form-note">ההודעה נפתחת אצלכם בוואטסאפ, ושום דבר לא נשלח בלעדיכם.</p>
+          <p class="sr-only" role="status" id="waStatus"></p>
         </form>
       </div>
     </div>
@@ -939,9 +966,15 @@ textarea.f-input{resize:vertical;min-height:104px;line-height:1.7}
       <a href="#faq">שאלות נפוצות</a>
       <a href="#contact">יצירת קשר</a>
     </nav>
+    <div class="footer-socials">
+      <a href="https://www.facebook.com/share/1FC1Z5vm6o/" target="_blank" rel="noopener" aria-label="הפייסבוק של יעקב"><svg aria-hidden="true"><use href="#i-fb"/></svg></a>
+      <a href="https://www.instagram.com/hamerkazlanadlan?igsh=bWh0N2I4aGo3azRs" target="_blank" rel="noopener" aria-label="האינסטגרם של יעקב"><svg aria-hidden="true"><use href="#i-ig"/></svg></a>
+      <a href="https://wa.me/972542681216" target="_blank" rel="noopener" aria-label="פתיחת שיחה עם יעקב בוואטסאפ"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
+      <a href="mailto:yakovb280@gmail.com" aria-label="שליחת מייל ליעקב"><svg aria-hidden="true"><use href="#i-mail"/></svg></a>
+    </div>
     <div class="footer-meta">
       <p>מתווך במקרקעין מורשה · רישיון מס׳ 0000000</p>
-      <p>© 2026 יעקב, יועץ נדל״ן. כל הזכויות שמורות. · <button class="a11y-link" id="a11yOpen" type="button">הצהרת נגישות</button></p>
+      <p>© 2026 יעקב, יועץ נדל״ן. כל הזכויות שמורות. · <a class="a11y-link" id="a11yOpen" href="accessibility.html">הצהרת נגישות</a></p>
     </div>
   </div>
 </footer>
@@ -951,7 +984,7 @@ textarea.f-input{resize:vertical;min-height:104px;line-height:1.7}
     <h2 id="a11y-title">הצהרת נגישות</h2>
     <p>אתר זה נבנה מתוך מחויבות לאפשר שימוש נוח ושוויוני לכלל הגולשים, בהתאם לעקרונות תקן ישראלי (ת״י) 5568 והנחיות WCAG 2.1 ברמה AA: מבנה סמנטי ברור, ניווט מלא באמצעות מקלדת, ניגודיות צבעים מספקת, טקסט חלופי לתמונות ותמיכה בהעדפת צמצום אנימציות.</p>
     <p>נתקלתם בקושי או ברכיב שאינו נגיש? נשמח לדעת ולתקן.</p>
-    <p class="dlg-contact">טלפון: <span class="phone-num">054-268-1216</span> · דוא״ל: YAKOVB280@gmail.com</p>
+    <p class="dlg-contact">טלפון: <span class="phone-num">054-268-1216</span> · דוא״ל: yakovb280@gmail.com</p>
     <p>ההצהרה עודכנה לאחרונה: יולי 2026.</p>
     <button class="btn btn--primary dlg-close" id="a11yClose" type="button">סגירה</button>
   </div>
@@ -1060,6 +1093,8 @@ textarea.f-input{resize:vertical;min-height:104px;line-height:1.7}
       if (msg) text += '\n' + msg;
       text += '\n(הגעתי דרך האתר)';
       window.open(WA + '?text=' + encodeURIComponent(text), '_blank', 'noopener');
+      var live = doc.getElementById('waStatus');
+      if (live) live.textContent = 'ההודעה נפתחה בוואטסאפ בחלון חדש';
     });
   }
 
@@ -1106,7 +1141,7 @@ textarea.f-input{resize:vertical;min-height:104px;line-height:1.7}
   var dlgOpen = doc.getElementById('a11yOpen');
   var dlgClose = doc.getElementById('a11yClose');
   if (dlg && dlgOpen && dlgClose && dlg.showModal) {
-    dlgOpen.addEventListener('click', function () { dlg.showModal(); });
+    dlgOpen.addEventListener('click', function (e) { e.preventDefault(); dlg.showModal(); });
     dlgClose.addEventListener('click', function () { dlg.close(); });
     dlg.addEventListener('click', function (e) {
       if (e.target === dlg) dlg.close();
